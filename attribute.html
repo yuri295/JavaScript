@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attribute</title>
+</head>
+<body>
+    <a href="http://opentutorials.org"
+            id="target">쿠로카와 아카네</a>
+</body>
+<script>
+    var t = document.getElementById('target');
+    console.log(t.getAttribute('href')); //http://opentutorials.org
+    t.setAttribute('title','opentutorials.org'); //title 속성 추가
+    console.log(t.hasAttribute('title'));  //true
+    t.removeAttribute('title'); //title 속성 삭제
+</script>
+</html>

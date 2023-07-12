@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery노드</title>
+</head>
+<body>
+    <div class="target" id="target1">
+        쿠로미
+    </div>
+    <div class="target" id="target2">
+        시나모롤
+    </div>
+
+    <div id="source">마이멜로디</div>
+
+    <input type="button" value="replaceAll 쿠로미" id="btn1"/>
+    <input type="button" value="replaceWith 시나모롤" id="btn2"/>
+    <input type="button" value="clone replaceAll 쿠로미" id="btn3"/>
+    <input type="button" value="clone replaceWith 시나모롤" id="btn4"/>
+    <input type="button" value="append 마이멜로디 to 쿠로미" id="btn5"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('#btn1').click(function(){
+            $('<div>마이멜로디</div>').replaceAll('#target1');
+        })
+
+        $('#btn2').click(function(){
+            $('#target2').replaceWith('<div>마이멜로디</div>');
+        })
+
+        $('#btn3').click(function(){
+            $('#source').clone().replaceAll('#target1');
+        })
+
+        $('#btn4').click(function(){
+            $('#target2').replaceWith($('#source').clone());
+        })
+
+        $('#btn5').click(function(){
+            $('#target1').append($('#source'));
+        })
+
+
+
+    </script>
+
+</body>
+</html>

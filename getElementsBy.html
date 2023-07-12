@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementBy</title>
+</head>
+<body>
+    <ul>
+        <li class="marked">호시노 아이</li>
+        <li>아리마 카나</li>
+        <li id="active">쿠로카와 아카네
+            <ul>
+                <li>18세</li>
+                <li class="marked">여성</li>
+                <li class="marked">라라라이</li>
+            </ul>
+        </li>
+    </ul>
+<script>
+    var list = document.getElementByClassName('marked');
+    console.group('document');
+    for(var i=0; i<list.length; i++){
+        console.log(list[i].textContent);
+    }
+    console.groupEnd();
+
+    console.group('active');
+    var active = document.getElementById('active');
+    var list = active.getElementsByClassName('marked');
+    for (var i = 0; i < list.length; i++){
+        console.log(list[i].textContent);
+    }
+    console.groupEnd();
+</script>
+</body>
+</html>

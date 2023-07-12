@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node의 종류</title>
+</head>
+<body>
+  <a href="https://namu.wiki/w/%E3%80%90%EC%B5%9C%EC%95%A0%EC%9D%98%20%EC%95%84%EC%9D%B4%E3%80%91" id="title" target="_blank"><h1>최애의 아이</h1></a>
+      <ul id="start">
+        <li> <a href="https://namu.wiki/w/%ED%98%B8%EC%8B%9C%EB%85%B8%20%EC%95%84%EC%9D%B4">호시노 아이</a> </li>
+        <li> <a href="https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%A7%88%20%EC%B9%B4%EB%82%98">아리마 카나 </a> </li>
+        <li> <a href="https://namu.wiki/w/%EC%BF%A0%EB%A1%9C%EC%B9%B4%EC%99%80%20%EC%95%84%EC%B9%B4%EB%84%A4">쿠로카와 아카네</a>
+          <ul>
+            <li>18세</li>
+            <li>여성</li>
+            <li>라라라이</li>
+          </ul>
+
+        </li>
+      </ul>
+  <script>
+    function traverse(target,callback){
+      if(target.nodeType === 1){
+        callback(target);
+        var c = target.childNodes;
+        for(var i = 0; i < c.length; i++){
+          traverse(c[i], callback);
+        }
+      }
+    }
+    traverse(document.getElementById('start'),function(elem){
+      console.log(elem);
+
+    });
+  </script>
+</body>
+</html>

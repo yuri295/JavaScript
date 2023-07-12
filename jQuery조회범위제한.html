@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+</head>
+<body>
+<ul>
+    <li class="marked">호시노 아이</li>
+    <li>아리마 카나</li>
+    <li id="active">쿠로카와 아카네
+        <ul>
+            <li>18세</li>
+            <li class="marked">여성</li>
+            <li class="marked">라라라이</li>
+        </ul>
+    </li>
+</ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $("#active").css("color","blue");
+    $("#active",".marked").css("background-color","pink");
+    $("#active").css("color","blue").find(".marked").css("background-color","pink");
+    //find() 사용
+
+</script>
+
+</body>
+</html>

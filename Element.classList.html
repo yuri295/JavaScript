@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element.classList</title>
+</head>
+<body>
+    <a href="https://namu.wiki/w/%E3%80%90%EC%B5%9C%EC%95%A0%EC%9D%98%20%EC%95%84%EC%9D%B4%E3%80%91" id="title" target="_blank"><h1>최애의 아이</h1></a>
+    <ul id="demo">
+        <li> <a href="https://namu.wiki/w/%ED%98%B8%EC%8B%9C%EB%85%B8%20%EC%95%84%EC%9D%B4">호시노 아이</a> </li>
+        <li> <a href="https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%A7%88%20%EC%B9%B4%EB%82%98" class="active">아리마 카나 </a> </li>
+        <li> <a href="https://namu.wiki/w/%EC%BF%A0%EB%A1%9C%EC%B9%B4%EC%99%80%20%EC%95%84%EC%B9%B4%EB%84%A4"
+                id="active" class="important current marked">쿠로카와 아카네</a> </li>
+    </ul>
+    <script>
+        var active = document.getElementById("active")
+        function loop(){
+            for(var i=0; i<active.classList.length; i++){
+                console.log(i,active.classList[i]);
+            }
+        }
+        //클래스를 추가
+
+    </script>
+    <input type="button" value="DOMTokenList" onclick="console.log(active.classList);">
+    <input type="button" value="조회" onclick="loop();">
+    <input type="button" value="추가" onclick="active.classList.add('marked');">
+    <input type="button" value="제거" onclick="active.classList.remove('important');">
+    <input type="button" value="토글" onclick="active.classList.toggle('current');">
+
+</body>
+</html>

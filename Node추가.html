@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node추가</title>
+</head>
+<body>
+  <ul id="target">
+    <li>호시노 아이</li>
+    <li>아리마 카나</li>
+  </ul>
+  <input type="button" onclick="callAppendChild();" value="appendChild" />
+  <input type="button" onclick="callInsertBefore();" value="InsertBefore" />
+  <script>
+    function callAppendChild(){
+      var target = document.getElementById('target');
+      var li = document.createElement('li');
+      var text = document.createTextNode('쿠로카와 아카네');
+      li.appendChild(text);
+      target.appendChild(li);
+    }
+
+    function callInsertBefore(){
+      var target = document.getElementById('target');
+      var li = document.createElement('li');
+      var text = document.createTextNode('쿠로카와 아카네');
+      li.appendChild(text);
+      target.insertBefore(li, target.firstChild);
+    }
+  </script>
+
+
+</body>
+</html>

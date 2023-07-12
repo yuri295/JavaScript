@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 노드 추가</title>
+</head>
+<body>
+  <div class="target">
+    content1
+  </div>
+
+  <div class="target">
+    content2
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.target').before('<div>before</div>');
+        $('.target').after('<div>after</div>');
+        $('.target').prepend('<div>prepent</div>');
+        $('.target').append('<div>append</div>');
+    </script>
+
+</body>
+</html>

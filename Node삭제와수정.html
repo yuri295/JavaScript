@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node 삭제</title>
+</head>
+<body>
+<ul>
+  <li>호시노 아이</li>
+  <li>아리마 카나</li>
+  <li id="target">쿠로카와 아카네</li>
+</ul>
+<input type="button" onclick="callRemoveChild();" value="removeChild"/>
+<input type="button" onclick="callReplaceChild();" value="replaceChild"/>
+
+<script>
+  function callRemoveChild(){
+    var target = document.getElementById('target');
+    target.parentNode.removeChild(target);
+  }
+
+  function callReplaceChild(){
+      var a = document.createElement('a');
+      a.setAttribute('href','https://namu.wiki/w/%EC%BF%A0%EB%A1%9C%EC%B9%B4%EC%99%80%20%EC%95%84%EC%B9%B4%EB%84%A4');
+      a.appendChild(document.createTextNode('쿠로카와 아카네 나무위키'));
+      var target = document.getElementById('target');
+      target.replaceChild(a,target.firstChild);
+  }
+
+</script>
+
+</body>
+</html>

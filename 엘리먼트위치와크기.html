@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <style>
+    body{
+      padding:0;
+      margin:0;
+    }
+    div{
+      border:50px solid #e610e2;
+      padding: 50px;
+      magin:50px;
+    }
+    #target{
+      width: 100px;
+      height:100px;
+    }
+  </style>
+  <div>
+    <div id="target">
+      Monstax
+    </div>
+  </div>
+  <script>
+    var t = document.getElementById('target');
+    console.log(t.getBoundingClientRect()); <!--엘리먼트의 크기와 위치-->
+    console.log(t.offsetParent); <!--엘리먼트 위치의 기준-->
+  </script>
+
+</body>
+</html>
